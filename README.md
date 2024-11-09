@@ -9,6 +9,6 @@ A responsive navigation bar with a sleek, modern design and a mobile-friendly ha
 - **Smooth Hover Effects**: Links change color with an underline animation.
 - **Hamburger Menu**: Collapses into a hamburger icon on smaller screens for easy navigation.
 
-## Demo
+## Live demo:
 
-![Navbar Demo](demo.gif) *(Insert a demo GIF or screenshot here)*
+https://ombedebob.github.io/Responsive-Navigation-Bar/
