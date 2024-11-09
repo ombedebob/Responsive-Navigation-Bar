@@ -1,0 +1,113 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      font-family: 'Poppins',sans-serif;
+      background-color: #f4f4f9;
+    }
+    
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #1a1a2e;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .navbar .logo{
+      font-size: 26px;
+      font-weight: 600;
+      color: tomato;
+    }
+    
+    .nav-links{
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    
+    .nav-links ll{
+      transition: all 0.3s ease;
+    }
+    
+    .nav-links a{
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+    .nav-links a::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #e94560;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    
+    .nav-links a:hover{
+      color: #e94560
+    }
+    
+    .nav-links a:hover::after{
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    .hamburger{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    
+    .hamburger span{
+      height: 3px;
+      width: 30px;
+      background: #fff;
+      transition: 0.4s;
+      border-radius: 2px;
+    }
+    
+    @media (max-width: 768px){
+      .nav-links{
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        background-color: #1a1a2e;
+        border-radius: 8px;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .nav-links li{
+        padding: 10px 0;
+        text-align: center;
+      }
+      
+      .hamburger{
+        display: flex;
+      }
+      
+      .nav-links.active{
+        display: flex;
+      }
+    }
+    
